@@ -18,19 +18,19 @@ int main() {
 
 		switch (choice) {
 		case 1:
-			// add employee logic
+			addEmployee();
 			break;
 		case 2:
-			// Remove employee logic
+			removeEmployee();
 			break;
 		case 3:
-			// display employees logic
+			displayEmployees();
 			break;
 		case 4:
-			// search by ID logic
+			searchByID();
 			break;
 		case 5:
-			// calculate wage gap logic
+			calculateWageGap();
 			break;
 		case 6:
 			printf("Exiting the program.\n");
