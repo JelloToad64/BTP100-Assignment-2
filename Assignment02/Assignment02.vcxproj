@@ -139,7 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Assignment04.c" />
+    <ClCompile Include="Assignment02.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="employee.h" />

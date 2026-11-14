@@ -1,9 +1,11 @@
+// Whole file worked on by Angelo and Ernesto
+
 #define MAX_NAME_LENGTH 100
 #define MAX_GENDER_LENGTH 50
 #define MAX_ETHNICITY_LENGTH 50
 #define MAX_EMPLOYEES 100
 
-struct Employee{
+struct Employee { // employee struct to hold employee data
 	int id;
 	char name[MAX_NAME_LENGTH];
 	float salary;	
@@ -11,10 +13,10 @@ struct Employee{
 	char ethnicity[MAX_ETHNICITY_LENGTH];
 };
 
-struct Employee employees[MAX_EMPLOYEES];
+struct Employee employees[MAX_EMPLOYEES]; 
 int employeeCount = 0;
 
-void addEmployee() {
+void addEmployee() { // function to add an employee to the database
 
 	if (employeeCount >= MAX_EMPLOYEES) {
 		printf("Database is full!\n");
@@ -45,7 +47,9 @@ void addEmployee() {
 
 	employeeCount++;
 }
-void removeEmployee() {
+
+void removeEmployee() { // function to remove an employee from the database by ID
+
 	int searchId;
 	int found = 0;
 	
@@ -73,7 +77,8 @@ void removeEmployee() {
 		printf("No matching ID found.");
 	}
 }
-void displayEmployees() {
+
+void displayEmployees() { // function to display all employees in the database
 	if (employeeCount == 0) {
 		printf("No employees in the database.\n\n");
 		return;
@@ -90,7 +95,8 @@ void displayEmployees() {
 	}
 }
 
-void searchByID() {
+void searchByID() { // function to search for an employee by ID and display their information
+
 	int idRequest;
 	int found = 0;
 
@@ -115,7 +121,8 @@ void searchByID() {
 	return;
 }
 
-void calculateWageGap() {
+void calculateWageGap() { // function to calculate the wage gap between two employees based on their IDs
+
 	int idCheckOne, idCheckTwo;
 	float salaryOne = 0.0f, salaryTwo = 0.0f;
 	float wageGap;
@@ -140,7 +147,7 @@ void calculateWageGap() {
 		printf("One or both employee IDs not found.\n");
 	}
 	else {
-		if (salaryOne < salaryTwo) { // Ensure wageGap is positive
+		if (salaryOne < salaryTwo) { // check to ensure the wage gap a positive number
 			int temp = salaryOne;
 			salaryOne = salaryTwo;
 			salaryTwo = temp;
